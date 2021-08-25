@@ -1,7 +1,7 @@
 package com.hqyj.bean;
 
 public class Stores {
-	private int s_id,s_head_status;
+	private int s_id,s_head_status,s_u_id;
 	private String s_name,s_address,s_tel,s_head_old,s_head_new;
 	public int getS_id() {
 		return s_id;
@@ -44,6 +44,12 @@ public class Stores {
 	}
 	public void setS_head_new(String s_head_new) {
 		this.s_head_new = s_head_new;
+	}
+	public int getS_u_id() {
+		return s_u_id;
+	}
+	public void setS_u_id(int s_u_id) {
+		this.s_u_id = s_u_id;
 	}
 	
 }

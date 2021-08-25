@@ -1,7 +1,7 @@
 package com.hqyj.bean;
 
 public class Addresses {
-	private int a_id;
+	private int a_id,a_u_id;
 	private String a_address,a_tel,a_name,a_isdefult;
 	public int getA_id() {
 		return a_id;
@@ -32,6 +32,12 @@ public class Addresses {
 	}
 	public void setA_isdefult(String a_isdefult) {
 		this.a_isdefult = a_isdefult;
+	}
+	public int getA_u_id() {
+		return a_u_id;
+	}
+	public void setA_u_id(int a_u_id) {
+		this.a_u_id = a_u_id;
 	}
 	
 }

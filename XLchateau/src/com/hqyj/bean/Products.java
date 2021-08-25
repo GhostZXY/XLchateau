@@ -1,7 +1,7 @@
 package com.hqyj.bean;
 
 public class Products {
-	private int p_id,p_inventory,p_status;
+	private int p_id,p_inventory,p_status,p_s_id,p_sub_id;
 	private String p_name,p_local,p_intro;
 	private Double p_price;
 	public int getP_id() {
@@ -45,6 +45,18 @@ public class Products {
 	}
 	public void setP_price(Double p_price) {
 		this.p_price = p_price;
+	}
+	public int getP_s_id() {
+		return p_s_id;
+	}
+	public void setP_s_id(int p_s_id) {
+		this.p_s_id = p_s_id;
+	}
+	public int getP_sub_id() {
+		return p_sub_id;
+	}
+	public void setP_sub_id(int p_sub_id) {
+		this.p_sub_id = p_sub_id;
 	}
 	
 }

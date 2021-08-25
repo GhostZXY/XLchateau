@@ -1,7 +1,7 @@
 package com.hqyj.bean;
 
 public class Orders {
-	private int o_id,o_num,o_status;
+	private int o_id,o_num,o_status,o_s_id,o_u_id,o_p_id,o_a_id;
 	private String o_long_name,o_log_no,o_ordertime;
 	public int getO_id() {
 		return o_id;
@@ -38,6 +38,30 @@ public class Orders {
 	}
 	public void setO_ordertime(String o_ordertime) {
 		this.o_ordertime = o_ordertime;
+	}
+	public int getO_s_id() {
+		return o_s_id;
+	}
+	public void setO_s_id(int o_s_id) {
+		this.o_s_id = o_s_id;
+	}
+	public int getO_u_id() {
+		return o_u_id;
+	}
+	public void setO_u_id(int o_u_id) {
+		this.o_u_id = o_u_id;
+	}
+	public int getO_p_id() {
+		return o_p_id;
+	}
+	public void setO_p_id(int o_p_id) {
+		this.o_p_id = o_p_id;
+	}
+	public int getO_a_id() {
+		return o_a_id;
+	}
+	public void setO_a_id(int o_a_id) {
+		this.o_a_id = o_a_id;
 	}
 	
 }
