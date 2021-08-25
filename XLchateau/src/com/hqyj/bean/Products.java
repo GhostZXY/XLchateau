@@ -1,0 +1,50 @@
+package com.hqyj.bean;
+
+public class Products {
+	private int p_id,p_inventory,p_status;
+	private String p_name,p_local,p_intro;
+	private Double p_price;
+	public int getP_id() {
+		return p_id;
+	}
+	public void setP_id(int p_id) {
+		this.p_id = p_id;
+	}
+	public int getP_inventory() {
+		return p_inventory;
+	}
+	public void setP_inventory(int p_inventory) {
+		this.p_inventory = p_inventory;
+	}
+	public int getP_status() {
+		return p_status;
+	}
+	public void setP_status(int p_status) {
+		this.p_status = p_status;
+	}
+	public String getP_name() {
+		return p_name;
+	}
+	public void setP_name(String p_name) {
+		this.p_name = p_name;
+	}
+	public String getP_local() {
+		return p_local;
+	}
+	public void setP_local(String p_local) {
+		this.p_local = p_local;
+	}
+	public String getP_intro() {
+		return p_intro;
+	}
+	public void setP_intro(String p_intro) {
+		this.p_intro = p_intro;
+	}
+	public Double getP_price() {
+		return p_price;
+	}
+	public void setP_price(Double p_price) {
+		this.p_price = p_price;
+	}
+	
+}
