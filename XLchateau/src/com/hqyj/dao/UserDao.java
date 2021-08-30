@@ -11,4 +11,6 @@ public interface UserDao {
 	public Users queryUserById(@Param("id")int id);
 	public int addUser(Users users);
 	public Users queryUserByUsername(@Param("u_username")String u_username);
+	public int updateUser(Users users);
+	public int updateUserWithPic(Users users);
 }

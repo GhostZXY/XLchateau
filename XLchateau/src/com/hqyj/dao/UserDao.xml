@@ -13,4 +13,12 @@
 		insert into users(u_username,u_password,u_type,u_hasstore)
 		values(#{u_username},#{u_password},'1','0')
 	</insert>
+	
+	<update id="updateUser">
+	
+	</update>
+	
+	<update id="updateUserWithPic">
+	
+	</update>
 </mapper>

@@ -70,6 +70,14 @@ public class BuyerController {
 		model.addAttribute("userInfo",userService.findUserByUsername(loginName));
 		return "buyerModify";
 	}
+	
+	@RequestMapping("/modify")
+	public String modify(){
+		
+		
+		return "redirect:/buyer/toModify.action";
+	}
+	
 	public ProductService getProductService() {
 		return productService;
 	}

@@ -23,11 +23,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  	<form action="" method="post">
-    <input type="text" id="u_username" name="u_username" value="${userInfo.u_username}" /><br>
+  	<form action="" method="post" enctype="multipart/form-data">
+    <input type="text" id="u_username" name="u_username" value="${userInfo.u_username}" disabled="disabled"/><br>
     <input type="password" id="u_password" name="u_password" value="${userInfo.u_password}"/><br>
   	<input type="text" id="u_nickname" name="u_nickname" value="${userInfo.u_nickname}"/><br>
-  	<input type="file" id="u_head" name="u_head" value="${userInfo.u_head_old}"/><br/>
+  	<input type="file" id="u_head" name="u_head" /><br/>
   	<input type="submit" value="修改" /><br>
   	</form>
   </body>
