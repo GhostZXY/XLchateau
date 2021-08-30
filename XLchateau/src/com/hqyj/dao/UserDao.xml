@@ -4,4 +4,13 @@
 	<select id="queryAllUser" resultType="users">
 		select * from users
 	</select>
+	
+	<select id="queryUserByUsername" resultType="users" parameterType="String">
+		select * from users where u_username = '${u_username}'
+	</select>
+	
+	<insert id="addUser" parameterType="users">
+		insert into users(u_username,u_password,u_type,u_hasstore)
+		values(#{u_username},#{u_password},'1','0')
+	</insert>
 </mapper>

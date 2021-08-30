@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'productInfo.jsp' starting page</title>
+    <title>My JSP 'buyerModify.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -23,18 +23,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  	<c:forEach items="${productsInfo}" var="productsInfo">
-    
-    <li>
-					
-						<img src="img/主机.jpg" />
-						<div class="product_info">
-							<p class="product_name">${productsInfo.p_name}</p>
-							<p class="product_price"><span>￥</span>${productsInfo.p_price}</p>
-							
-						</div>
-					</a>
-				</li>
-	</c:forEach>
+  	<form action="" method="post">
+    <input type="text" id="u_username" name="u_username" value="${userInfo.u_username}" /><br>
+    <input type="password" id="u_password" name="u_password" value="${userInfo.u_password}"/><br>
+  	<input type="text" id="u_nickname" name="u_nickname" value="${userInfo.u_nickname}"/><br>
+  	<input type="file" id="u_head" name="u_head" value="${userInfo.u_head_old}"/><br/>
+  	<input type="submit" value="修改" /><br>
+  	</form>
   </body>
 </html>

@@ -1,8 +1,8 @@
 package com.hqyj.bean;
 
 public class Users {
-	private int u_id,u_type,u_hasstore,u_head_status;
-	private String u_username,u_password,u_nickname,u_head_old,u_head_new;
+	private int u_id,u_type,u_head_status;
+	private String u_username,u_password,u_nickname,u_hasstore,u_head_old,u_head_new;
 	public int getU_id() {
 		return u_id;
 	}
@@ -15,10 +15,11 @@ public class Users {
 	public void setU_type(int u_type) {
 		this.u_type = u_type;
 	}
-	public int getU_hasstore() {
+	
+	public String getU_hasstore() {
 		return u_hasstore;
 	}
-	public void setU_hasstore(int u_hasstore) {
+	public void setU_hasstore(String u_hasstore) {
 		this.u_hasstore = u_hasstore;
 	}
 	public int getU_head_status() {

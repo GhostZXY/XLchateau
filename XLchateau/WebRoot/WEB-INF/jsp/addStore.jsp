@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'productInfo.jsp' starting page</title>
+    <title>My JSP 'AddStore.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -23,18 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  	<c:forEach items="${productsInfo}" var="productsInfo">
-    
-    <li>
-					
-						<img src="img/主机.jpg" />
-						<div class="product_info">
-							<p class="product_name">${productsInfo.p_name}</p>
-							<p class="product_price"><span>￥</span>${productsInfo.p_price}</p>
-							
-						</div>
-					</a>
-				</li>
-	</c:forEach>
+   AddStore page. <br>
   </body>
 </html>
+

@@ -28,6 +28,38 @@ public class UserServiceImpl implements UserService{
 		// TODO Auto-generated method stub
 		return userDao.queryAllUser();
 	}
-	
+
+	@Override
+	public Users findUserById(int id) {
+		// TODO Auto-generated method stub
+		return userDao.queryUserById(id);
+	}
+
+	@Override
+	public boolean addUser(Users users) {
+		// TODO Auto-generated method stub
+		if(userDao.queryUserByUsername(users.getU_username()) == null){
+		return userDao.addUser(users)!=0;
+	}
+		return false;
+	}
+
+	@Override
+	public boolean login(Users users) {
+		// TODO Auto-generated method stub
+		Users u = userDao.queryUserByUsername(users.getU_username());
+		if(u != null){
+			if(u.getU_password().equals(users.getU_password())){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public Users findUserByUsername(String username) {
+		// TODO Auto-generated method stub
+		return userDao.queryUserByUsername(username);
+	}
 	
 }

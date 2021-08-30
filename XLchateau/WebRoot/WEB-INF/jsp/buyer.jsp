@@ -3,11 +3,26 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+Cookie[] cookies = request.getCookies();
+String loginName = "";
+for(Cookie cookie : cookies){
+	if(cookie.getName().equals("LOGINNAME")){
+		loginName = cookie.getValue();
+	}
+}
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+  <base href="<%=basePath%>">
+    
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
 		<meta charset="utf-8" />
 		<title>酒庄商城</title>
 		<script src="js/jquery-3.0.0.js" type="text/javascript" charset="utf-8"></script>
@@ -22,8 +37,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<header>
 			<div id="top_nav">
 				<div id="nav_log_reg">
-					<a href="login.html" id="to_login">您好，请登录</a>
-					<a href="register.html" id="to_register">免费注册</a>
+				<%
+					if(loginName.equals("")){
+				 %>
+					<a href="buyer/toLogin.action">您好，请登录</a>
+					<a href="buyer/toRegister.action">免费注册</a>
+				<%
+					}else{
+				 %>
+				 <p>您好,<a href="buyer/toModify.action?loginName=<%=loginName%>"><%=loginName%></a></p>
+				 <%
+				 	}
+				  %>
 				</div>
 				<div class="nav_shopping_cart">
 					<a href="shoppingcart.html" id="to_shopping_cart">

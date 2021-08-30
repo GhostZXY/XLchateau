@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'productInfo.jsp' starting page</title>
+    <title>My JSP 'sellerHome.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -17,24 +17,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
 	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="texts" href="styles.css">
 	-->
 
   </head>
   
   <body>
-  	<c:forEach items="${productsInfo}" var="productsInfo">
-    
-    <li>
-					
-						<img src="img/主机.jpg" />
-						<div class="product_info">
-							<p class="product_name">${productsInfo.p_name}</p>
-							<p class="product_price"><span>￥</span>${productsInfo.p_price}</p>
-							
-						</div>
-					</a>
-				</li>
-	</c:forEach>
+    This is my JSP page.商家 <br>
   </body>
-</html>
+<ml>
